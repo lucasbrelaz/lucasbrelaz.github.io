@@ -17,13 +17,16 @@
 <body>
   <iframe id="ytPlayer" style="position: absolute !important; width: 100% !important; height: 100% !important; z-index: 100" src="" frameborder="0" allowfullscreen=""></iframe>
   <div style="position: absolute;top: 0;width: 100%;height: 70px;background-color: transparent;z-index: 101;left: 0;"></div>
-  <div style="position: absolute;bottom: 0;width: 100%;height: 50px;background-color: transparent;z-index: 101;left: 0;"></div>
+  <div style="position: absolute;bottom: 0;width: 100%;height: 45px;background-color: transparent;z-index: 101;left: 0;"></div>
 
   <script>
     document.addEventListener('contextmenu', event => event.preventDefault());
     var ytElement = document.getElementById("ytPlayer");
     var videoID = new URL(window.location.href).searchParams.get("v");
-    var stringUrl = `https://www.youtube.com/embed/${videoID}?enablejsapi=0&amp;autoplay=0&amp;modestbranding=1&amp;controls=0&amp;showinfo=0&amp;rel=0&amp;hd=1&amp;wmode=transparent&amp;enablejsapi=0`;
+    var paramControls = new URL(window.location.href).searchParams.get("controls");
+    var paramShowinfo = new URL(window.location.href).searchParams.get("showinfo");
+    var paramHd = new URL(window.location.href).searchParams.get("hd");
+    var stringUrl = `https://www.youtube.com/embed/${videoID}?enablejsapi=0&amp;autoplay=0&amp;modestbranding=1&amp;controls=${paramControls}&amp;showinfo=${paramShowinfo}&amp;rel=0&amp;hd=${paramHd}&amp;wmode=transparent&amp;enablejsapi=0`;
 
     while(!ytElement.getAttribute("data-replaced")) {
       ytElement.setAttribute("src", stringUrl);
