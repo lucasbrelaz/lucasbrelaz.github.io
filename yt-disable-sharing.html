@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- YT Disable Sharing and Logo Click -->
+  <!-- Created by Lucas R Brelaz -->
+  <!-- www.lucasbrelaz.com.br -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YT Disable Sharing by Lucas Brelaz</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
+  <iframe id="ytPlayer" style="position: absolute !important; width: 100% !important; height: 100% !important; z-index: 100" src="" frameborder="0" allowfullscreen=""></iframe>
+  <div style="position: absolute;top: 0;width: 100%;height: 70px;background-color: red;z-index: 101;left: 0;"></div>
+  <div style="position: absolute;bottom: 0;width: 100%;height: 50px;background-color: red;z-index: 101;left: 0;"></div>
+
+  <script>
+    document.addEventListener('contextmenu', event => event.preventDefault());
+    var ytElement = document.getElementById("ytPlayer");
+    var videoID = new URL(window.location.href).searchParams.get("v");
+    var stringUrl = `https://www.youtube.com/embed/${videoID}?enablejsapi=0&amp;autoplay=0&amp;modestbranding=1&amp;controls=0&amp;showinfo=0&amp;rel=0&amp;hd=1&amp;wmode=transparent&amp;enablejsapi=0`;
+
+    while(!ytElement.getAttribute("data-replaced")) {
+      ytElement.setAttribute("src", stringUrl);
+      ytElement.setAttribute("data-replaced", true);
+      window.frames["ytPlayer"].contentDocument.oncontextmenu = function() {
+        return false;
+      };
+    }
+  </script>
+</body>
+</html>
