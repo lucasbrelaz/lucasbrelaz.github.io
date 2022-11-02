@@ -1,0 +1,351 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.text-primary {
+  color: #EB6FE6 !important;
+}
+
+a, a:visited {
+  color: #EB6FE6;
+  text-decoration: none;
+  border-bottom: 1px solid #EB6FE6;
+}
+
+a:hover {
+  color: #a918a4;
+  border-bottom: 1px solid #a918a4;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  background-color: #EB6FE6;
+  height: 7px;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+  background-color: #EB6FE6;
+  height: 7px;
+}
+
+::-webkit-scrollbar {
+  height: 7px;
+  width: 7px;
+  background-color: #333333;
+}
+
+::-moz-selection {
+  color: #fff;
+  background: #EB6FE6;
+}
+
+::selection {
+  color: #fff;
+  background: #EB6FE6;
+}
+
+.scrollToTop {
+  position: fixed;
+  bottom: 64px;
+  right: 32px;
+  opacity: 0.5;
+  -webkit-transition: .3s transform ease-in-out, .3s opacity ease-in-out;
+  transition: .3s transform ease-in-out, .3s opacity ease-in-out;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.scrollToTop:hover {
+  opacity: 1;
+}
+
+.scrollToTop a, .scrollToTop a:visited {
+  color: #F2F2F2;
+  text-decoration: none;
+  font-size: 32px;
+  font-weight: bold;
+  padding: 16px;
+  background: #4F4F4F;
+  text-align: center;
+  border-radius: 4px;
+}
+
+body {
+  background: #F1EDED;
+}
+
+h1 {
+  font-weight: bold;
+  color: #333333;
+}
+
+.its-me {
+  color: #EB6FE6;
+}
+
+p {
+  color: #4F4F4F;
+  font-size: 18px;
+}
+
+.super-bg {
+  background: -webkit-gradient(linear, right top, left top, color-stop(3.3%, #0B1735), color-stop(85.58%, rgba(52, 1, 41, 0.79)));
+  background: linear-gradient(270deg, #0B1735 3.3%, rgba(52, 1, 41, 0.79) 85.58%);
+  border-radius: 64px;
+  margin-top: -80px;
+  padding-top: 80px;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+nav h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #F2F2F2;
+  text-transform: uppercase;
+  padding: 20px 0;
+}
+
+nav ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-left: 0;
+}
+
+nav ul li {
+  padding: 24px;
+  text-transform: uppercase;
+}
+
+nav ul li a, nav ul li a:visited {
+  color: #F2F2F2;
+  text-decoration: none;
+  border-bottom: 0;
+}
+
+nav ul li a:hover {
+  color: #a6a6a6;
+  border-bottom: 0;
+}
+
+header .hero-text {
+  margin-bottom: 104px;
+}
+
+header .hero-text h1, header .hero-text h2 {
+  color: #EB6FE6;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 80px;
+  margin-bottom: 0;
+}
+
+@supports (-webkit-text-stroke: 2px #EB6FE6) {
+  header .hero-text h2 {
+    color: transparent;
+    -webkit-text-stroke: 2px #EB6FE6;
+  }
+}
+
+@supports not (-webkit-text-stroke: 2px #EB6FE6) {
+  header .hero-text h2 {
+    color: #EB6FE6;
+  }
+}
+
+header .hero-text p {
+  font-size: 24px;
+  line-height: 1.6;
+  color: #F2F2F2;
+  margin-top: 24px;
+}
+
+header .hero-avatar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+header .hero-avatar .img-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .hero-avatar .img-box img {
+  width: 100%;
+}
+
+.s-portfolio {
+  margin: 104px 0;
+}
+
+.s-portfolio .portfolio-item {
+  margin-bottom: 80px;
+}
+
+.s-portfolio .portfolio-item .portfolio-item-img img {
+  width: 100%;
+  background-color: #333333;
+}
+
+.s-portfolio .portfolio-item .portfolio-item-text h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+
+.s-portfolio .portfolio-item .portfolio-item-text p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.s-pre-about {
+  margin-bottom: 48px;
+}
+
+.s-pre-about .card-about {
+  background: #fff;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-bottom: 32px;
+}
+
+.s-pre-about .card-about h1 {
+  font-size: 24px;
+  margin: 24px;
+}
+
+.s-pre-about .card-about p {
+  font-size: 18px;
+  margin-left: 24px;
+  margin-right: 24px;
+  margin-bottom: 0;
+  padding-bottom: 16px;
+}
+
+.s-pre-about .card-about p:last-child {
+  padding-bottom: 24px;
+}
+
+.s-pre-about .card-about img {
+  margin-top: 24px;
+  width: 100%;
+}
+
+.s-about {
+  margin-bottom: 80px;
+}
+
+.s-about h1 {
+  margin-bottom: 40px;
+}
+
+.s-contato {
+  margin-bottom: 104px;
+}
+
+.s-contato h2 {
+  font-size: 36px;
+  color: #333333;
+  margin-bottom: 32px;
+}
+
+.s-contato ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.s-contato ul li {
+  font-size: 18px;
+  margin-right: 32px;
+}
+
+.s-contato ul li a, .s-contato ul li a:visited {
+  border-bottom: 2px solid #EB6FE6;
+}
+
+.s-contato ul li a:hover {
+  border-bottom: 2px solid #a918a4;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 80px;
+  background: -webkit-gradient(linear, right top, left top, color-stop(3.3%, #0B1735), color-stop(85.58%, rgba(52, 1, 41, 0.79)));
+  background: linear-gradient(270deg, #0B1735 3.3%, rgba(52, 1, 41, 0.79) 85.58%);
+}
+
+footer .footer-text {
+  text-align: center;
+}
+
+footer .footer-text p {
+  color: #F2F2F2;
+  margin: 0;
+  padding: 0;
+}
+
+@media only screen and (max-width: 1023px) {
+  header .hero-avatar {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  header .hero-text {
+    margin-bottom: 64px;
+  }
+  nav ul li {
+    padding-left: 0;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  header .hero-text h1, header .hero-text h2 {
+    font-size: 48px;
+  }
+  header .hero-text p {
+    font-size: 18px;
+  }
+  .s-portfolio .portfolio-item .portfolio-item-text h1 {
+    font-size: 32px;
+  }
+  .s-contato h2 {
+    font-size: 24px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
